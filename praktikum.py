@@ -4,7 +4,7 @@ from tkinter import ttk, messagebox
 
 DB_NAME = "nilai_siswa.db"
 
-# ---------- DATABASE ----------
+
 def buat_tabel():
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
@@ -43,7 +43,7 @@ def ambil_semua_data():
     conn.close()
     return hasil
 
-# ---------- LOGIKA PREDIKSI ----------
+
 def tentukan_prediksi(biologi, fisika, inggris):
     nilai_tertinggi = max(biologi, fisika, inggris)
     hasil = []
@@ -56,7 +56,7 @@ def tentukan_prediksi(biologi, fisika, inggris):
     # Jika ada nilai tertinggi yang sama, tampilkan semuanya
     return " / ".join(hasil)
 
-# ---------- GUI ----------
+
 def submit_nilai():
     nama = entry_nama.get().strip()
 
